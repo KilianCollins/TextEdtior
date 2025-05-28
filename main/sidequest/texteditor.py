@@ -156,7 +156,8 @@ font_choice.menu = tkinter.Menu(font_choice, tearoff=0) #why doesnt this work?
 font_choice["menu"]= font_choice.menu
 font_choice.menu.add_checkbutton(label="Courier", command=courier_new)
 font_choice.menu.add_checkbutton(label="Helvetica", command=helvetica)
-font_choice.menu.add_checkbutton(label="Times New Roman", command=times_new_roman )
+font_choice.menu.add_checkbutton(label="Times New Roman", command=times_new_roman)
+font_choice.menu.add_checkbutton(label="Arial",command=arial)
 
     #save button
 save_button = Button(root, text="Save As", command=save_as)
