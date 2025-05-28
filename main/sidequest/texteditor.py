@@ -1,3 +1,4 @@
+import random
 import sys
 import tkinter
 from idlelib.run import exit_now
@@ -20,6 +21,7 @@ root =  tkinter.Tk("Text Editor")
 #
 font_size = 12
 text= tkinter.Text(root)
+
 
 
 # text reception time
@@ -135,6 +137,28 @@ def delta_font(font):
              }
     return fonts.get(font.lower())
 
+def color_text(color:str="black"):
+    '''i tied this functionallity to a button bc idk how eles to get this to not crash '''
+    tag_name_current = "t" + str(random.randint(0, 50))
+    tag_name_previous = tag_name_current
+    tag_name = "t" + str(
+        random.randint(0, 50)) if tag_name_previous != tag_name_current else "t" + str(random.randint(50, 990)
+                        )
+    # global highlight_start, highlight_stop
+    try:
+        current_pos_of_cursor = text.index(tkinter.INSERT)
+        highlight_start = text.index(tkinter.SEL_FIRST)
+        highlight_stop = text.index(tkinter.SEL_LAST)
+        text.tag_add(tag_name, highlight_start, highlight_stop)
+        text.tag_config(tag_name, foreground=color)
+
+    except tkinter.TclError:
+        print("nothing selected")
+
+
+
+
+
 # print(delta_font("helvetica")())
 
 
@@ -151,34 +175,53 @@ def delta_font(font):
 # insert pictures button
 
 ######################### buttons #####################################3
-Exit_Program = tkinter.Button(root, text="Close", command=sys.exit)
+
 
     #font menu button
 font_choice = tkinter.Menubutton(root, text="Font", relief="raised", borderwidth=2) # is this an  object of the Menubutton class? or an instance? are those the same thing?
 font_choice.menu = tkinter.Menu(font_choice, tearoff=0) #why doesnt this work?
 font_choice["menu"]= font_choice.menu
-font_choice.menu.add_checkbutton(label="Courier", command=courier_new)
-font_choice.menu.add_checkbutton(label="Helvetica", command=helvetica)
-font_choice.menu.add_checkbutton(label="Times New Roman", command=times_new_roman)
-font_choice.menu.add_checkbutton(label="Arial",command=arial)
+font_choice.menu.add_command(label="Courier", command=courier_new)
+font_choice.menu.add_command(label="Helvetica", command=helvetica)
+font_choice.menu.add_command(label="Times New Roman", command=times_new_roman)
+font_choice.menu.add_command(label="Arial",command=arial)
 
+    #exit button
+Exit_Program = tkinter.Button(root, text="Close", command=sys.exit)
+    #color menu button
+color_selected_text = tkinter.Menubutton(root, text="Color_Text",relief="raised",borderwidth=2)
+color_selected_text.menu = tkinter.Menu(color_selected_text, tearoff=0)
+color_selected_text["menu"]= color_selected_text.menu
+# IT WORKS LETS GOOOOOO
+color_selected_text.menu.add_command(label="black",command=lambda: color_text("black"))
+color_selected_text.menu.add_command(label="Red", command=lambda: color_text("red"))
     #save button
 save_button = Button(root, text="Save As", command=save_as)
 
     #opens file explorer
 open_file = tkinter.Button(root, text="Open File", command=open_file_x)
 
-
 #
+# how do i get this to wait and only run when user has actallu selected the text
 
+
+
+# text.pack(expand=1, fill=BOTH)
 
 ######### button placement
 save_button.grid(row=0, column=0)
 font_choice.grid(row=0, column=1)
 open_file.grid(row=0, column=2)
+color_selected_text.grid(row=0,column=3)
 Exit_Program.grid(row=0, column=9)
 # all buttons must be above text.grid()
 text.grid(row=1, column=0,columnspan=10)
+
+
+
+# color_text(start=highlight_start, stop=highlight_stop, color="green")
+
+
 
 # \/ the program stops looking for instructions after here \/
 # save_button.mainloop() # this adds the button to loop # wrong objects do not have the mainloop()

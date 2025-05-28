@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f42c497-6538-44ed-a8f5-8b347b3f70a5" name="Changes" comment="working on solving the menubutton animation and event bingind problem, 5-28-25 12:33am added: exit button(exits program), save as default file type(.txt), open file button(opens fe and can open and display any txt doc0),         to do: add animation to font menu, add text color option, back round color option, add images---over and out----">
+      <change afterPath="$PROJECT_DIR$/main/sidequest/test of color text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/sidequest/test of tagname gen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/sidequest/texteditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/sidequest/texteditor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +54,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Main.executor": "Run",
+    "Python.test of color text.executor": "Run",
     "Python.test of fe.executor": "Run",
+    "Python.test of tagname gen.executor": "Run",
     "Python.texteditor.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
