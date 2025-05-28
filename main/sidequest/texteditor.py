@@ -43,6 +43,9 @@ def save_as():
     file_a.close()
 
 def open_file_x():
+    '''later todo:
+            add the ability to open and accept and make  .dox, .csv, ect. and other file types
+             a check to see if file is of visula type and deny that for now '''
     # opens f
     file_name = filedialog.askopenfilename(
                                             initialdir="/",

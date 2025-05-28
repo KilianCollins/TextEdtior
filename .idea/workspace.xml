@@ -55,7 +55,8 @@
     "Python.texteditor.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "5-28-25"
+    "git-widget-placeholder": "5-28-25",
+    "last_opened_file_path": "C:/Users/kilia/PyCharmMiscProject"
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -106,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748410535277</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="working on solving the menubutton animation and event bingind problem, 5-28-25 12:33am added: exit button(exits program), save as default file type(.txt), open file button(opens fe and can open and display any txt doc0),         to do: add animation to font menu, add text color option, back round color option, add images---over and out----">
+      <option name="closed" value="true" />
+      <created>1748410641146</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1748410641146</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
