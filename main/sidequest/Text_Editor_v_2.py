@@ -20,6 +20,7 @@ root =  tkinter.Tk("Text Editor")
 
 #
 font_size = 12
+background_color = "White"
 text= tkinter.Text(root)
 
 
@@ -63,37 +64,6 @@ def open_file_x():
     # inserts contents of file at line 0 colum 0
     text.insert("0.0", contents)
 
-
-
-
-
-#     save button
-#  place the button
-# save_button.place(x=0,y=0)
-
-
-
-def times_new_roman():
-    global font_size
-    global text
-    text.config(font=("Times New Roman",font_size))
-
-def helvetica():
-    global font_size
-    global text
-    # text.config("Helvetica") # incorrect
-    text.config(font=("Helvetica",font_size))
-
-def courier_new():
-    global font_size
-    global text
-    text.config(font=("Courier New",font_size))
-
-def arial():
-    global font_size
-    global text
-    text.config(font=("Arial",font_size))
-
 # font button making, its a drop down list that letst the user select which font hey want
 
 # if tkinter.Widget.i
@@ -116,7 +86,12 @@ def arial():
 # when pressed opens the file explorer
 
 
+# when the menu button is pressed i want the main button(the one that contains all the small ones) to become depressed ((sunken))
 
+# main B remains sunken untill user clicks off or selects a sub button (one of the small ones)
+
+def menu_animate_sunken():
+    pass
 
 
 
@@ -144,7 +119,7 @@ def delta_font(font):
     except tkinter.TclError:
         print("nothing selected")
 
-def color_text(color:str="black"):
+def delta_color_text(color:str= "black"):
     '''i tied this functionallity to a button bc idk how eles to get this to not crash '''
     tag_name_current = "t" + str(random.randint(0, 50))
     tag_name_previous = tag_name_current
@@ -162,16 +137,25 @@ def color_text(color:str="black"):
     except tkinter.TclError:
         print("nothing selected")
 
-
-
-
-
-# print(delta_font("helvetica")())
+# def delt_text_size(font_size:int=12):
+#     tag_name_current = "s" + str(random.randint(0, 50))
+#     tag_name_previous = tag_name_current
+#     tag_name = "s" + str(
+#         random.randint(0, 50)) if tag_name_previous != tag_name_current else "s" + str(random.randint(50, 990)
+#                                                                                        )
+#     # global highlight_start, highlight_stop
+#     try:
+#         current_pos_of_cursor = text.index(tkinter.INSERT)
+#         highlight_start = text.index(tkinter.SEL_FIRST)
+#         highlight_stop = text.index(tkinter.SEL_LAST)
+#         text.tag_add(tag_name, highlight_start, highlight_stop)
+#         text.tag_config(tag_name, )
+#
+#     except tkinter.TclError:
+#         print("nothing selected")
 
 
 # breaks down tthe steaps of what each componnetn of theses comands do
-
-
 
 # delta text size
 
@@ -189,10 +173,10 @@ font_choice = tkinter.Menubutton(root, text="Font", relief="raised", borderwidth
 font_choice.menu = tkinter.Menu(font_choice, tearoff=0) #why doesnt this work?
 font_choice["menu"]= font_choice.menu
 # man the lambda function is really powerful, i still dont quite understand how it works
-font_choice.menu.add_command(label="Courier", command=lambda:delta_font(courier_new))
-font_choice.menu.add_command(label="Helvetica", command=lambda:delta_font(helvetica))
-font_choice.menu.add_command(label="Times New Roman", command=lambda:delta_font(times_new_roman))
-font_choice.menu.add_command(label="Arial",command=lambda:delta_font(arial))
+font_choice.menu.add_command(label="Courier", command=lambda:delta_font(("Courier New", font_size)))
+font_choice.menu.add_command(label="Helvetica", command=lambda:delta_font(("Helvetica", font_size)))
+font_choice.menu.add_command(label="Times New Roman", command=lambda:delta_font(("Times New Roman", font_size)))
+font_choice.menu.add_command(label="Arial",command=lambda:delta_font(("Arial",font_size)))
 
     #exit button
 Exit_Program = tkinter.Button(root, text="Close", command=sys.exit)
@@ -201,8 +185,15 @@ color_selected_text = tkinter.Menubutton(root, text="Color_Text",relief="raised"
 color_selected_text.menu = tkinter.Menu(color_selected_text, tearoff=0)
 color_selected_text["menu"]= color_selected_text.menu
 # IT WORKS LETS GOOOOOO
-color_selected_text.menu.add_command(label="black",command=lambda: color_text("black"))
-color_selected_text.menu.add_command(label="Red", command=lambda: color_text("red"))
+# are these listed colors all the available colors?
+color_selected_text.menu.add_command(label="black", command=lambda: delta_color_text("black"))
+color_selected_text.menu.add_command(label="Red", command=lambda: delta_color_text("red"))
+color_selected_text.menu.add_command(label="Blue", command=lambda: delta_color_text("blue"))
+color_selected_text.menu.add_command(label="Green", command=lambda: delta_color_text("green"))
+color_selected_text.menu.add_command(label="Yellow", command=lambda: delta_color_text("yellow"))
+color_selected_text.menu.add_command(label="Orange", command=lambda: delta_color_text("orange"))
+color_selected_text.menu.add_command(label="Pink", command=lambda: delta_color_text("pink"))
+color_selected_text.menu.add_command(label="Gray", command=lambda: delta_color_text("gray"))
     #save button
 save_button = Button(root, text="Save As", command=save_as)
 
