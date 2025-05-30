@@ -1,4 +1,4 @@
-# Simple Tkinter Text Editor
+# Homemade Simple Tkinter Text Editor
 
 A beginner-to-intermediate level **Python GUI Text Editor** built with `tkinter`, aimed at helping the developer learn GUI design, event handling, and widget configuration by doing. This project replicates basic features found in common text editing programs, with additional emphasis on customization and experimentation.
 
