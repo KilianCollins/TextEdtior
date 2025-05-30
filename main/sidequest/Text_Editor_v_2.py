@@ -13,6 +13,8 @@ from numpy.f2py.auxfuncs import l_and
 from pygame.event import clear
 
 root =  tkinter.Tk("Text Editor")
+root.configure(background="white")
+
 # root.geometry("400x300")
 # CREATES window
 
@@ -143,6 +145,9 @@ def delta_color_text(color:str= "black"):
     except tkinter.TclError:
         print("nothing selected")
 
+def delta_bg_color(color:str="white"):
+    text.configure(background=color)
+
 def open_font_menu(event):
     font_choice.config(relief="sunken")
     # font_choice.event_generate('<Button-1>')
@@ -150,6 +155,30 @@ def raise_font_menu(event):
     font_choice.config(relief="raised")
 
 # def wait()
+
+# bg color button
+bg_color_button = tkinter.Menubutton(root,text="Backround Color", relief="raised",borderwidth=2)
+bg_color_button.menu = tkinter.Menu(bg_color_button,tearoff=0)
+bg_color_button["menu"] = bg_color_button.menu
+#  there has got to be a better more efficent way than this boilerplate rediculoslyness
+bg_color_button.menu.add_command(label="White",command=lambda:delta_bg_color("white"))
+bg_color_button.menu.add_command(label="Gray",command=lambda:delta_bg_color("gray"))
+bg_color_button.menu.add_command(label="Black",command=lambda:delta_bg_color("black"))
+bg_color_button.menu.add_command(label="Blue",command=lambda:delta_bg_color("blue"))
+bg_color_button.menu.add_command(label="Green",command=lambda:delta_bg_color("green"))
+bg_color_button.menu.add_command(label="Yellow",command=lambda:delta_bg_color("yellow"))
+bg_color_button.menu.add_command(label="Orange",command=lambda:delta_bg_color("orange"))
+bg_color_button.menu.add_command(label="Red",command=lambda:delta_bg_color("red"))
+bg_color_button.menu.add_command(label="Pink",command=lambda:delta_bg_color("pink"))
+bg_color_button.menu.add_command(label="White",command=lambda:delta_bg_color("white"))
+
+
+
+
+
+
+
+
 
 # def delt_text_size(font_size:int=12):
 #     tag_name_current = "s" + str(random.randint(0, 50))
@@ -214,9 +243,10 @@ color_selected_text.menu = tkinter.Menu(color_selected_text, tearoff=0)
 color_selected_text["menu"]= color_selected_text.menu
 # IT WORKS LETS GOOOOOO
 # are these listed colors all the available colors?
-color_selected_text.menu.add_command(label="black", command=lambda: delta_color_text("black"))
+color_selected_text.menu.add_command(label="Black", command=lambda: delta_color_text("black"))
 color_selected_text.menu.add_command(label="Red", command=lambda: delta_color_text("red"))
 color_selected_text.menu.add_command(label="Blue", command=lambda: delta_color_text("blue"))
+                                                            # we do this way for the funciton ref bc funct needs parameters and for some reason can jusrt enter in the assingment therr
 color_selected_text.menu.add_command(label="Green", command=lambda: delta_color_text("green"))
 color_selected_text.menu.add_command(label="Yellow", command=lambda: delta_color_text("yellow"))
 color_selected_text.menu.add_command(label="Orange", command=lambda: delta_color_text("orange"))
@@ -225,7 +255,7 @@ color_selected_text.menu.add_command(label="Gray", command=lambda: delta_color_t
     #save button
 save_button = Button(root, text="Save As", command=save_as)
 
-    #opens file explorer
+    #opens file explorer                                # we do this way for the function ref bc no parameters are needed
 open_file = tkinter.Button(root, text="Open File", command=open_file_x)
 
 #
@@ -240,6 +270,7 @@ save_button.grid(row=0, column=0)
 font_choice.grid(row=0, column=1)
 open_file.grid(row=0, column=2)
 color_selected_text.grid(row=0,column=3)
+bg_color_button.grid(row=0, column=4)
 Exit_Program.grid(row=0, column=9)
 # all buttons must be above text.grid()
 text.grid(row=1, column=0,columnspan=10)
