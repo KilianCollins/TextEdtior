@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f42c497-6538-44ed-a8f5-8b347b3f70a5" name="Changes" comment="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want))))), alsoo i added the ability to cahnge the back  round color hehe">
-      <change afterPath="$PROJECT_DIR$/main/sidequest/Examples of x/Lambda conti.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/sidequest/Examples of x/lambda parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/sidequest/Examples of x/lambda parameters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/sidequest/Text_Editor_v_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/sidequest/Text_Editor_v_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748581638009</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want))))), alsoo i added the ability to cahnge the back  round color hehe">
+      <option name="closed" value="true" />
+      <created>1748619352427</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748619352427</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
