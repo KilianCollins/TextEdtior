@@ -22,7 +22,7 @@ root =  tkinter.Tk("Text Editor")
 font_size = 12
 background_color = "White"
 text= tkinter.Text(root)
-
+menu_state = "raised"
 
 
 # text reception time
@@ -90,9 +90,13 @@ def open_file_x():
 
 # main B remains sunken untill user clicks off or selects a sub button (one of the small ones)
 
-def menu_animate_sunken():
-    pass
-
+def menu_sunken(event):
+    global menu_state
+    font_choice.config(relief="sunken")
+    print("sunken")
+def menu_raise(event):
+    font_choice.config(relief="raised")
+    print("raised")
 
 
 
@@ -102,12 +106,14 @@ def menu_animate_sunken():
 # arial_FONT           = InitVar()
 # helvetica_FONT       = InitVar()
 
-def delta_font(font):
+def delta_font(font=("Times New Roman", font_size)):
+    font_choice.config(relief="sunken")
     tag_name_current = "n" + str(random.randint(0, 50))
     tag_name_previous = tag_name_current
     tag_name = "n" + str(
         random.randint(0, 50)) if tag_name_previous != tag_name_current else "t" + str(random.randint(50, 990)
-                                                                                       )
+                        )
+
 
     try:
         current_pos_of_cursor = text.index(tkinter.INSERT)
@@ -136,6 +142,14 @@ def delta_color_text(color:str= "black"):
 
     except tkinter.TclError:
         print("nothing selected")
+
+def open_font_menu(event):
+    font_choice.config(relief="sunken")
+    # font_choice.event_generate('<Button-1>')
+def raise_font_menu(event):
+    font_choice.config(relief="raised")
+
+# def wait()
 
 # def delt_text_size(font_size:int=12):
 #     tag_name_current = "s" + str(random.randint(0, 50))
@@ -173,10 +187,24 @@ font_choice = tkinter.Menubutton(root, text="Font", relief="raised", borderwidth
 font_choice.menu = tkinter.Menu(font_choice, tearoff=0) #why doesnt this work?
 font_choice["menu"]= font_choice.menu
 # man the lambda function is really powerful, i still dont quite understand how it works
-font_choice.menu.add_command(label="Courier", command=lambda:delta_font(("Courier New", font_size)))
-font_choice.menu.add_command(label="Helvetica", command=lambda:delta_font(("Helvetica", font_size)))
-font_choice.menu.add_command(label="Times New Roman", command=lambda:delta_font(("Times New Roman", font_size)))
-font_choice.menu.add_command(label="Arial",command=lambda:delta_font(("Arial",font_size)))
+                                                                #i did the list so that the lambda can accept multipl
+                                                                # statments bc i want the buttin to raise then lower after a menu item has been selected
+font_choice.menu.add_command(label="Courier", command=lambda:[delta_font(font=("Courier New", font_size)), raise_font_menu])
+font_choice.menu.add_command(label="Helvetica", command=lambda:[delta_font(font=("Helvetica", font_size)), raise_font_menu])
+font_choice.menu.add_command(label="Times New Roman", command=lambda:[delta_font(font=("Times New Roman", font_size)), raise_font_menu] )
+font_choice.menu.add_command(label="Arial",command=lambda:[delta_font(font=("Arial",font_size)), raise_font_menu] )
+
+# sinks the button on CLICK
+
+# font_choice.bind('<ButtonPress-1>',(raise_font_menu if font_choice.event_info('<ButtonRelease-1>') else open_font_menu) )
+font_choice.bind('<ButtonPress-1>',open_font_menu)
+
+# font_choice.bind("ButtonPress-1", lambda e: menu_sunken(event=e))
+# root.update_idletasks()
+# raises the button on select
+# font_choice.bind("ButtonRelease-1",lambda e: menu_raise(event=e))
+
+
 
     #exit button
 Exit_Program = tkinter.Button(root, text="Close", command=sys.exit)
