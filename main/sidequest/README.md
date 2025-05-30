@@ -17,7 +17,7 @@ This is a functional and expandable GUI-based **Text Editor** application. It al
 
 It is designed to balance **functionality** with **learning-by-doing**, using clear code and custom features to explore event-driven GUI programming in Python.
 
----
+--- 
 
 ## 🎯 Why This Project Exists
 
