@@ -160,7 +160,7 @@ def raise_font_menu(event):
 bg_color_button = tkinter.Menubutton(root,text="Backround Color", relief="raised",borderwidth=2)
 bg_color_button.menu = tkinter.Menu(bg_color_button,tearoff=0)
 bg_color_button["menu"] = bg_color_button.menu
-#  there has got to be a better more efficent way than this boilerplate rediculoslyness
+#  there has got to be a better more efficient way than this boilerplate ridiculousness
 bg_color_button.menu.add_command(label="White",command=lambda:delta_bg_color("white"))
 bg_color_button.menu.add_command(label="Gray",command=lambda:delta_bg_color("gray"))
 bg_color_button.menu.add_command(label="Black",command=lambda:delta_bg_color("black"))
@@ -171,7 +171,6 @@ bg_color_button.menu.add_command(label="Orange",command=lambda:delta_bg_color("o
 bg_color_button.menu.add_command(label="Red",command=lambda:delta_bg_color("red"))
 bg_color_button.menu.add_command(label="Pink",command=lambda:delta_bg_color("pink"))
 bg_color_button.menu.add_command(label="White",command=lambda:delta_bg_color("white"))
-
 
 
 
@@ -252,6 +251,7 @@ color_selected_text.menu.add_command(label="Yellow", command=lambda: delta_color
 color_selected_text.menu.add_command(label="Orange", command=lambda: delta_color_text("orange"))
 color_selected_text.menu.add_command(label="Pink", command=lambda: delta_color_text("pink"))
 color_selected_text.menu.add_command(label="Gray", command=lambda: delta_color_text("gray"))
+color_selected_text.menu.add_command(label="White",command=lambda :delta_color_text("white"))
     #save button
 save_button = Button(root, text="Save As", command=save_as)
 

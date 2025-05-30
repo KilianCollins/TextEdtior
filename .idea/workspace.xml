@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f42c497-6538-44ed-a8f5-8b347b3f70a5" name="Changes" comment="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want)))))">
+    <list default="true" id="5f42c497-6538-44ed-a8f5-8b347b3f70a5" name="Changes" comment="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want))))), alsoo i added the ability to cahnge the back  round color hehe">
+      <change afterPath="$PROJECT_DIR$/main/sidequest/Examples of x/Lambda conti.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/sidequest/Examples of x/lambda parameters.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/sidequest/Examples of x/lambda parameters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/sidequest/Text_Editor_v_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/sidequest/Text_Editor_v_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +53,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Lambda conti.executor": "Run",
     "Python.Main.executor": "Run",
     "Python.Text_Editor_v_2.executor": "Run",
     "Python.example of even binding and listenting.executor": "Run",
@@ -160,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748580436508</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want))))), alsoo i added the ability to cahnge the back  round color hehe">
+      <option name="closed" value="true" />
+      <created>1748581638009</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748581638009</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -171,6 +182,7 @@
     <MESSAGE value="working on solving the menubutton animation and event bingind problem, 5-28-25 6:43pm added: added: ability to select text and hange the font of just that selected text         to do: add animation to font menu, back round color option, add images---over and out----" />
     <MESSAGE value="working on solving the menubutton animation and event bingind problem, 5-29-25 10:00pm added: added: ability to select text and hange the font of just that selected text         to do: add animation to font menu, back round color option, add images---over and out----" />
     <MESSAGE value="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want)))))" />
-    <option name="LAST_COMMIT_MESSAGE" value="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want)))))" />
+    <MESSAGE value="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want))))), alsoo i added the ability to cahnge the back  round color hehe" />
+    <option name="LAST_COMMIT_MESSAGE" value="5-29-25 11:40pm added: aimation to font button( sort of its stil inverted)(( sunken while at rest raised when activatied(((the opposite of what i want))))), alsoo i added the ability to cahnge the back  round color hehe" />
   </component>
 </project>
